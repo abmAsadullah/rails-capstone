@@ -1,16 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag(@group.icon, class:"rounded-circle") %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
+<%= image_tag(@group.icon, class:"rounded-circle", style:"width:50px; height:50px") %>
 
-<p>
-  <strong>User:</strong>
-  <%= @group.user.email %>
-</p>
-
+<strong><%= @group.name %></strong>
+<small>
+  <%= @group.created_at.strftime('%B %d %Y') %>
+</small>
+<br/>
 <%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Destroy', @group, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', groups_path %>
