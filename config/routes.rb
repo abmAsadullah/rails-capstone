@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'groups#index'
+  root to: 'homepage#index'
   resources :transactions
   resources :groups
   devise_for :users
