@@ -24,6 +24,7 @@
 
 
   <div class="field">
+    <%= form.label :group %>
     <%= collection_select(:transaction, :group_id, Group.all, :id, :name, :prompt => true )%>
   </div>
 

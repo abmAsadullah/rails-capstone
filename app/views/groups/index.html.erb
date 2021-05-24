@@ -3,13 +3,19 @@
 <h1>Groups</h1>
 
     <% @groups.each do |group| %>
-      <%= image_tag(group.icon, class:"rounded-circle", style:"width:50px; height:50px") %>
-
-      <strong><%= group.name %></strong>
-      <small>
-        <%= group.created_at.strftime('%B %d %Y') %>
-      </small>
-      <br/>
+      <div class="">
+        <div class="d-inline">
+          <%= image_tag(group.icon, class:"rounded-circle", style:"width:50px; height:50px") %>
+        </div>
+        <div class="d-inline">
+          <strong><%= link_to group.name, group %></strong>
+          <small>
+            <%= group.created_at.strftime('%B %d %Y') %>
+          </small>
+        </div>
+        <br/>
+        <br/>
+      </div>
     <% end %>
 
 <br>

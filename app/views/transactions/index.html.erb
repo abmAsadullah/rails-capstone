@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>All my external transactions</h1>
+<h1 class="display-6">All my external transactions :</h1>
+<hr/>
 
+<h2 class="display-6">Total amount= <%= all_transactions(@transactions) %>TK</h2>
 <table>
   <thead>
     <tr>
@@ -19,7 +21,7 @@
         <td><%= transaction.name %></td>
         <td><%= transaction.amount %></td>
         <td><%= transaction.user_id %></td>
-        <td><%= transaction.group_id %></td>
+        <td><%= image_tag(transaction.group.icon, class:"rounded-circle", style:"width:50px; height:50px") %></td>
         <td><%= link_to 'Show', transaction %></td>
         <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
         <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
