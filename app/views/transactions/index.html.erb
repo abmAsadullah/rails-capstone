@@ -4,32 +4,23 @@
 <hr/>
 
 <h2 class="display-6">Total amount= <%= all_transactions(@transactions) %>TK</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>User</th>
-      <th>Group</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @transactions.each do |transaction| %>
-      <tr>
-        <td><%= transaction.name %></td>
-        <td><%= transaction.amount %></td>
-        <td><%= transaction.user_id %></td>
-        <td><%= image_tag(transaction.group.icon, class:"rounded-circle", style:"width:50px; height:50px") %></td>
-        <td><%= link_to 'Show', transaction %></td>
-        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
-        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @transactions.each do |transaction| %>
+  <div class="d-inline">
+    <div class="d-inline-block">
+      <%= image_tag(transaction.group.icon, class:"rounded-circle", style:"width:80px; height:80px") %>
+    </div>
+    <div class="d-inline-block align-middle">
+      <h5><%= transaction.name %> </h5>
+      <small><%= transaction.created_at.strftime('%B %d %Y') %></small>
+    </div>
+  </div>
+  <div class="d-inline">
+    <strong>Paid amount $<%= transaction.amount %></strong>
+  </div>
+  <br>
+<% end %>
 
-<br>
+
 
 <%= link_to 'New Transaction', new_transaction_path %>
