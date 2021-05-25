@@ -2,7 +2,9 @@
 
 In this project, we created an app for group transaction. People can create a group and creat his/her transaction.<br>
 
-![screenshot](./image/Comming Soon)
+![screenshot](./image/capture-01.jpeg)<br>
+![screenshot](./image/capture-02.jpeg)<br>
+![screenshot](./image/capture-03.jpeg)<br>
 
 ## 🔧 Built With
 
