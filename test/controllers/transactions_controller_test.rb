@@ -1,3 +1,4 @@
+# rubocop:disable Layout/LineLength
 require 'test_helper'
 
 class TransactionsControllerTest < ActionDispatch::IntegrationTest
@@ -46,3 +47,4 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to transactions_url
   end
 end
+# rubocop:disable Layout/LineLength

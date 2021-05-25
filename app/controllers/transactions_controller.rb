@@ -53,11 +53,11 @@ class TransactionsController < ApplicationController
 
   # DELETE /transactions/1 or /transactions/1.json
   def destroy
-  @transaction.destroy
-  respond_to do |format|
-    format.html { redirect_to transactions_url, notice: 'Transaction was successfully destroyed.' }
-    format.json { head :no_content }
-  end
+    @transaction.destroy
+    respond_to do |format|
+      format.html { redirect_to transactions_url, notice: 'Transaction was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
