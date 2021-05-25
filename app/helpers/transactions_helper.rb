@@ -1,5 +1,5 @@
 module TransactionsHelper
-    def all_transactions(transactions)
-        transactions.sum(:amount)
-    end
+  def all_transactions(transactions)
+    transactions.sum(:amount)
+  end
 end
