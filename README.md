@@ -1,24 +1,48 @@
-# README
+## 👩🏼‍💻 About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, we created an app for group transaction. People can create a group and creat his/her transaction.<br>
 
-Things you may want to cover:
+![screenshot](./image/Comming Soon)
 
-* Ruby version
+## 🔧 Built With
 
-* System dependencies
+- Ruby (language)
+- Rails (framework)
+- Bootstrap4 (framework)
+- Devise (gem)
 
-* Configuration
+## 🤖 Getting started
 
-* Database creation
+You'll need to have both Ruby and Rails installed on your computer.
 
-* Database initialization
+- In the desired directory, type `git clone https://github.com/abmAsadullah/ror-capstone-group-transactions.git` in the terminal.
 
-* How to run the test suite
+- Then type `cd ror-capstone-group-transactions` in the terminal to change the directory into the root of the project.
 
-* Services (job queues, cache servers, search engines, etc.)
+- Then type `bundle install && yarn install` to download the necessary gem files for the project.
 
-* Deployment instructions
+- Run `rails server` to start the server for the application.
 
-* ...
+- Open `localhost:3000` to start.
+
+- Create an account and create event.
+
+## Author
+
+👤 **A B M Asadullah**
+
+- GitHub: [@abmAsadullah](https://github.com/abmAsadullah)
+- Twitter: [@abmAsadullah](https://twitter.com/abmAsadullah)
+- LinkedIn: [abmAsadullah](https://www.linkedin.com/in/abmAsadullah)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## ⭐ Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
