@@ -1,13 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 
-<%= image_tag(@group.icon_attachment_path, class:"rounded-circle", style:"width:50px; height:50px") %>
+<%= image_tag(@group.icon_attachment_path, class:"rounded-circle", style:"width:80px; height:80px") %>
 
 <strong><%= @group.name %></strong>
 <small>
   <%= @group.created_at.strftime('%B %d %Y') %>
 </small>
+<h2>In this group the transactions are:</h2>
 <br/>
+<% @transactions.each do |transaction| %>
+  <% if transaction.group == @group %>
+   <div class="d-inline">
+    <div class="d-inline-block">
+      <%= image_tag(transaction.group.icon_attachment_path, class:"rounded-circle", style:"width:50px; height:50px") %>
+    </div>
+    <div class="d-inline-block align-middle">
+      <h5><%= transaction.name %> </h5>
+      <small><%= transaction.created_at.strftime('%B %d %Y') %></small>
+    </div>
+  </div>
+  <div class="d-inline">
+    <strong>Paid amount $<%= transaction.amount %></strong>
+  </div>
+  <% end %>
+  <br>
+<% end %>
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Destroy', @group, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', groups_path %>
