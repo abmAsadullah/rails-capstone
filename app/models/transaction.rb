@@ -2,7 +2,7 @@ class Transaction < ApplicationRecord
   belongs_to :user
   belongs_to :group
   has_many :connectors
-  has_many :transactions, through: :connectors
+  has_many :groups, through: :connectors
 
   validates :name, presence: true
   validates :amount, presence: true
