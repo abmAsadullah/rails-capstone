@@ -1,6 +1,8 @@
 class Group < ApplicationRecord
   belongs_to :user
-  has_many :transactions
+  has_many :connectors
+  has_many :transactions, through: :connectors
+
   has_one_attached :icon
   validates :name, presence: true, uniqueness: { case_sensitive: false }
 
