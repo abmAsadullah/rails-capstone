@@ -7,7 +7,11 @@
         <% if transaction.user == current_user %>
          <div class="d-inline">
           <div class="d-inline-block">
-            <%= image_tag(transaction.group.icon_attachment_path, class:"rounded-circle", style:"width:80px; height:80px") %>
+            <% if transaction.group %>
+              <%= image_tag(transaction.group.icon_attachment_path, class:"rounded-circle", style:"width:80px; height:80px") %>
+            <% else %>
+              No group
+            <% end %>
           </div>
           <div class="d-inline-block align-middle">
             <h5><%= transaction.name %> </h5>
