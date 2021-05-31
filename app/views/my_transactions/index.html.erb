@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My transactions</h1>
+<h2 class="display-6">Total amount= $<%= all_transactions(@my_transactions) %></h2>
+
+    <% @my_transactions.each do |transaction| %>
+        <% if transaction.user == current_user %>
+         <div class="d-inline">
+          <div class="d-inline-block">
+            <% if transaction.group %>
+              <%= image_tag(transaction.group.icon_attachment_path, class:"rounded-circle", style:"width:80px; height:80px") %>
+            <% else %>
+              No group
+            <% end %>
+          </div>
+          <div class="d-inline-block align-middle">
+            <h5><%= transaction.name %> </h5>
+            <small><%= transaction.created_at.strftime('%B %d %Y') %></small>
+          </div>
+        </div>
+        <div class="d-inline">
+          <strong>Paid amount $<%= transaction.amount %></strong>
+        </div>
+        <% end %>
+        <br>
+    <% end %>
+<br>
+
+<%= link_to 'New Transaction', new_transaction_path %>
